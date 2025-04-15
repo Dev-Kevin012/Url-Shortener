@@ -1,11 +1,11 @@
 const URL = require("../models/Url");
 const path = require("path");
 
+const staticDir = path.join(__dirname, "..", "public"); 
+
 const handleViews = async (req, res, next) => {
   const staticRoutes = ["/login", "/register", "/home", "/"];
   const id = req.params.id;
-
-  const staticDir = path.join(__dirname, 'public');
 
   if (staticRoutes.includes(id)) {
     return res.sendFile(path.join(staticDir, "index.html"));
