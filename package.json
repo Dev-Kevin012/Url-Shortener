@@ -2,8 +2,8 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "scripts": {
-    "install": "cd client && npm install && cd ../server && npm install",
-    "build": "cd client && npm run build",
-    "start": "cd server && npm start"
+  "vercel-build": "npm run build",
+  "build": "cd client && npm install && npm run build && cd ../server && npm install",
+  "start": "cd server && npm start"
   }
 }
